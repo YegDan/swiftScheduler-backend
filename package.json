@@ -14,13 +14,14 @@
   "author": "Group 26 - Yeganeh Daneshparvar,",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.6.1",
-    "mongoose": "^8.3.4",
-    "react-router-dom": "^6.23.0"
+    "mongoose": "^8.3.4"
   },
   "devDependencies": {
     "babel-loader": "^9.1.3",

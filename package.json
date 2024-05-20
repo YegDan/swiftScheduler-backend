@@ -4,6 +4,9 @@
   "description": "",
   "main": "server.js",
   "start": "node app.js",
+  "engines": {
+    "node" : "18.x"
+  },
   "scripts": {
     "test": "mocha",
     "start": "node app.js",

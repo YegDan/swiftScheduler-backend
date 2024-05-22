@@ -30,7 +30,7 @@ exports.teacherLogin = async (req, res) => {
     // Generate JWT token
     // had to add email to token needed for frontend -Ven
     
-    const token = jwt.sign({ userId: teacher._id, role: 'teacher', email: teacher.email, isAdmin: teacher.isAdmin}, process.env.JWT_SECRET);
+    const token = jwt.sign({ userId: teacher._id, role: 'teacher', email: teacher.email, isAdmin: teacher.isAdmin}, "chris_is_our_local_legend_over_9000");
 
     res.json({ token });
   } catch (error) {
@@ -55,7 +55,7 @@ exports.studentLogin = async (req, res) => {
     // Generate JWT token
     // had to add email to token needed for frontend -Ven
     
-    const token = jwt.sign({ userId: student._id, role: 'student', email: student.email }, process.env.JWT_SECRET);
+    const token = jwt.sign({ userId: student._id, role: 'student', email: student.email }, "chris_is_our_local_legend_over_9000");
 
     res.json({ token });
   } catch (error) {
@@ -109,7 +109,7 @@ exports.studentRegister = async (req, res) => {
     // Generate JWT token
     // had to add email to token needed for frontend -Ven
     
-    const token = jwt.sign({ userId: newStudent._id, role: 'student', email: newStudent.email }, process.env.JWT_SECRET);
+    const token = jwt.sign({ userId: newStudent._id, role: 'student', email: newStudent.email }, "chris_is_our_local_legend_over_9000");
 
     res.status(201).json({ token });
   } catch (error) {
@@ -141,7 +141,7 @@ exports.teacherRegister = async (req, res) => {
     // Generate JWT token
     // had to add email to token needed for frontend -Ven
     
-    const token = jwt.sign({ userId: newTeacher._id, role: 'teacher', email: newTeacher.email }, process.env.JWT_SECRET);
+    const token = jwt.sign({ userId: newTeacher._id, role: 'teacher', email: newTeacher.email }, "chris_is_our_local_legend_over_9000");
 
     res.status(201).json({ token });
   } catch (error) {

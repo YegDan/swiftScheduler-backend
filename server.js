@@ -8,7 +8,7 @@ const classRouter = require('./routers/classRoutes'); // Ensure this path is cor
 const classroomRouter = require('./routers/classroomRoutes');
 const app = express();
 const cors = require('cors');
-require('dotenv').config();
+
 
 app.use(bodyParser.json());
 app.use(cors({
@@ -22,7 +22,7 @@ app.use('/classrooms', classroomRouter);
 app.use('/classes', classRouter); // This line is updated
 
 
-const PORT = process.env.PORT || 8081;
+const PORT =  8081;
 mongoose.connect('mongodb+srv://rootadmin:m5NvavxMIOPodOKz@clusterrl.wd5fhyo.mongodb.net/Swift-Scheduler')
     .then(() => console.log('MongoDB connected...'))
     .catch(err => console.log(err));

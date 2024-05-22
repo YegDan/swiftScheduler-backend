@@ -2,8 +2,8 @@
 import * as chai from 'chai';
 import sinon from 'sinon';
 import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
-dotenv.config();
+// import dotenv from 'dotenv';
+// dotenv.config();
 import { authenticate, isTeacher, isStudent } from '../middleware/authMiddleware.js';
 
 describe('Auth Middleware', () => {
@@ -35,7 +35,7 @@ describe('Auth Middleware', () => {
              isAdmin: false};
 
 
-            const token = jwt.sign(user, process.env.JWT_SECRET);
+            const token = jwt.sign(user, "chris_is_our_local_legend_over_9000");
             const req = {
                 headers: {
                     authorization: `Bearer ${token}`
